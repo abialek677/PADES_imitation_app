@@ -1,3 +1,17 @@
+## @signing_app_main.py
+#  @brief GUI application for digitally signing and verifying PDF documents using RSA keys.
+#
+#  This app allows :
+#  - Sign PDF documents using a private key (can be automatically detected from pendrive)
+#  - Verify the integrity and authenticity of signed PDF documents
+#  - Select keys and files through a GUI
+#
+#  The signing process uses secure cryptographic standards to ensure that
+#  the signed documents can be verified using a public key.
+#  Errors such as invalid signatures or incorrect passphrases are handled by showing appropriate message.
+#
+#  @date 2025-04-23
+
 import os
 import time
 import threading
@@ -17,8 +31,19 @@ aes_mode = AES.MODE_GCM
 PRIVATE_KEY = None
 MANUAL_KEY_SELECTION = False
 
-
 def decrypt_private_key(pk_path, passphrase):
+    """
+       @brief Decrypts a private key stored in a file.
+
+       This function loads an encrypted private key from the specified file and decrypts it using
+       the provided passphrase. The decrypted private key is returned for use in cryptographic
+       operations such as signing documents.
+
+       @param pk_path The path to the file containing the encrypted private key.
+       @param passphrase The passphrase used to decrypt the private key.
+
+       @return The decrypted private key as a string.
+       """
     with open(pk_path, "rb") as f:
         key = f.read()
     salt, nonce, tag, ciphertext = key[:16], key[16:32], key[32:48], key[48:]
@@ -35,6 +60,21 @@ def decrypt_private_key(pk_path, passphrase):
 def adjust_metadata(pdf_path: str,
                     remove_fields_metadata: Optional[List[str]] = None,
                     add_fields_metadata: Optional[Dict[str, Any]] = None) -> bytes:
+    """
+       @brief Adjusts metadata of a PDF file.
+
+       This function modifies the metadata of a PDF file by removing/adding specific fields
+       as specified by the parameters. It allows for updating the PDF's metadata without altering
+       the content of the document itself.
+
+       @param pdf_path The path to the PDF file whose metadata is to be adjusted.
+       @param remove_fields_metadata A list of metadata field names to remove from the PDF.
+                                     (Optional, default is None).
+       @param add_fields_metadata A dictionary of metadata field names and values to add to the PDF.
+                                  (Optional, default is None).
+
+       @return The PDF file as a byte stream with the updated metadata.
+       """
     reader = PdfReader(pdf_path)
     writer = PdfWriter()
     writer.append_pages_from_reader(reader)
@@ -55,6 +95,18 @@ def adjust_metadata(pdf_path: str,
 
 
 def sign_pdf(private_key_pem, pdf_path):
+    """
+        @brief Signs a PDF file using a private key.
+
+        This function signs a PDF file with the provided private key, generating a cryptographic
+        signature that ensures the authenticity of the document. The private key is used to sign
+        the PDF, ensuring that the content has not been changed since the signature was applied.
+
+        @param private_key_pem The private key in PEM format used for signing the PDF.
+        @param pdf_path The path to the PDF file that needs to be signed.
+
+        @return The signed PDF as a byte stream.
+        """
     private_key = RSA.importKey(private_key_pem)
     pdf_bytes = adjust_metadata(pdf_path, remove_fields_metadata=['/sig'])
     pdf_hash = SHA256.new(pdf_bytes)
@@ -68,6 +120,14 @@ def sign_pdf(private_key_pem, pdf_path):
 
 
 def verify_signature(signed_pdf_path, public_key_path):
+    """
+        @brief Verifies the digital signature of a PDF document.
+
+        @param signed_pdf_path Path to the signed PDF file.
+        @param public_key_path Path to the public key used for verification.
+
+        @return None. Displays result of verification.
+        """
     reader = PdfReader(signed_pdf_path)
     metadata = reader.metadata
     signature = bytes.fromhex(metadata.get('/sig'))
@@ -81,9 +141,15 @@ def verify_signature(signed_pdf_path, public_key_path):
         print("Signature is valid!")
     except (ValueError, TypeError) as e:
         print("Invalid signature:", e)
+        raise ValueError("Invalid signature")
 
 
 def detect_pendrive():
+    """
+       @brief Detects if a USB pendrive is connected to the system.
+
+       @return The path to the detected pendrive or None if not found.
+       """
     global PRIVATE_KEY, MANUAL_KEY_SELECTION
     while True:
         time.sleep(1)
@@ -94,12 +160,13 @@ def detect_pendrive():
                 for f in files:
                     if f.endswith('.enc'):
                         pem_files.append(os.path.join(root, f))
-
+        # If only one key is detected, choose key automatically
         if len(pem_files) == 1 and not MANUAL_KEY_SELECTION:
             PRIVATE_KEY = pem_files[0]
-            main_window.after(0, lambda: usb_status_label.config(text="Detected"))
+            main_window.after(0, lambda: usb_status_label.config(text="One key detected"))
             main_window.after(0, lambda: sign_pdf_button.config(state=tk.NORMAL))
-            main_window.after(0, lambda: select_key_button.config(state=tk.DISABLED))
+            main_window.after(0, lambda: select_key_button.config(state=tk.DISABLED, text="Using the only available key."))
+        # If more than one key is detected, select key manually
         elif len(pem_files) > 1:
             if not MANUAL_KEY_SELECTION:
                 PRIVATE_KEY = None
@@ -117,24 +184,35 @@ def detect_pendrive():
 
 
 def select_pdf_to_sign():
+    """
+        @brief Opens a file dialog to select a PDF file to sign.
+
+        @return None. Stores the selected PDF path for signing.
+        """
+    # If no private key is selected, show error message
     if not PRIVATE_KEY or not os.path.exists(PRIVATE_KEY):
         messagebox.showerror("Error", "No private key selected or key file missing!")
         return
 
     passphrase = simpledialog.askstring("Enter Passphrase", "Enter your passphrase:", show="*")
+    # If passphrase is too short, show error message
     if not passphrase or len(passphrase) < 8:
-        messagebox.showerror("Wrong passphrase", "Passphrase is wrong")
+        messagebox.showerror("Invalid passphrase", "Invalid passphrase: minimum length is 8 characters.")
         return
 
+    # Select PDF to sign
     pdf_path = filedialog.askopenfilename(title="Select PDF to sign", filetypes=[("PDF Files", "*.pdf")])
     if not pdf_path:
         return
 
+    # Decrypt private key
     try:
         private_key_pem = decrypt_private_key(PRIVATE_KEY, passphrase)
+    # If private key file not found, show error message
     except FileNotFoundError:
         messagebox.showerror("Error", "Private key file not found!")
         return
+    # If passphrase incorrect or corrupted file, show error message
     except ValueError:
         messagebox.showerror("Error", "Incorrect PIN or corrupted key file!")
         return
@@ -142,9 +220,11 @@ def select_pdf_to_sign():
         messagebox.showerror("Error", f"Failed to decrypt private key: {str(e)}")
         return
 
+    # Sign PDF file using private key
     try:
         sign_pdf(private_key_pem, pdf_path)
         messagebox.showinfo("Success", "PDF signed successfully!")
+    # If PDF file not found, show error message
     except FileNotFoundError:
         messagebox.showerror("Error", "PDF file not found!")
     except Exception as e:
@@ -152,7 +232,13 @@ def select_pdf_to_sign():
 
 
 def check_signature():
+    """
+       @brief Checks the digital signature of the currently selected PDF.
+
+       @return None. Displays the result of the signature check.
+       """
     signed_pdf_path = filedialog.askopenfilename(title="Select signed PDF", filetypes=[("PDF Files", "*.pdf")])
+    # If PDF file not found, show error message
     if not signed_pdf_path:
         return
     public_key_path = filedialog.askopenfilename(title="Select Public Key", filetypes=[("PEM Files", "*.pem")])
@@ -162,10 +248,16 @@ def check_signature():
         verify_signature(signed_pdf_path, public_key_path)
         messagebox.showinfo("Signature Verification", "Signature is valid!")
     except Exception as e:
-        messagebox.showerror("Signature Verification", f"Signature is invalid: {str(e)}")
+        messagebox.showerror("Signature Verification", "Signature is invalid! Make sure the passphrase and file are correct.")
+
 
 
 def select_private_key():
+    """
+        @brief Opens a file dialog to select a private key file.
+
+        @return None. Stores the selected private key for signing purposes.
+        """
     global PRIVATE_KEY, MANUAL_KEY_SELECTION
     pendrives = [disk.device for disk in psutil.disk_partitions() if 'removable' in disk.opts]
     initialdir = pendrives[0] if len(pendrives) == 1 else None
@@ -178,27 +270,40 @@ def select_private_key():
         sign_pdf_button.config(state=tk.NORMAL)
 
 
+# Create GUI
 main_window = tk.Tk()
 main_window.title("Document Signing and Verification App")
-main_window.geometry("300x300")
+main_window.geometry("400x300")
 main_window.resizable(False, False)
+main_window.columnconfigure(0, weight=1)
+main_window.rowconfigure(0, weight=1)
+main_window.configure(bg="#f2f2f7")
 
 style = ttk.Style()
-style.configure("TButton", padding=5, font=("Arial", 10))
+style.theme_use("default")
+style.configure("TButton", padding=10, font=("Arial", 10), background="#E4EFF0")
+style.map("Custom.TButton", background=[("active", "#cde2e4"), ("!active", "#E8F2F1")])
 style.configure("TLabel", font=("Arial", 10))
 style.configure("TEntry", padding=5)
 
-sign_pdf_button = ttk.Button(main_window, text="Sign PDF", state=tk.DISABLED, command=select_pdf_to_sign)
-sign_pdf_button.grid(row=0, column=0, padx=10, pady=10)
+frame = ttk.Frame(main_window, padding=20)
+frame.place(relx=0.5, rely=0.5, anchor="center")
+frame.grid(row=0, column=0, sticky="nsew")
 
-usb_status_label = ttk.Label(main_window, text="There are no keys on USB detected", font=("Arial", 10))
+sign_pdf_button = ttk.Button(frame, text="Sign PDF", state=tk.DISABLED, command=select_pdf_to_sign, style="Custom.TButton")
+sign_pdf_button.grid(row=0, column=0, padx=10, pady=10, sticky="ew")
+
+usb_status_label = ttk.Label(frame, text="There are no keys on USB detected", font=("Arial", 10))
 usb_status_label.grid(row=1, column=0, padx=10, pady=5)
 
-check_signature_button = ttk.Button(main_window, text="Check Signature", command=check_signature)
+check_signature_button = ttk.Button(frame, text="Check Signature", command=check_signature, style="Custom.TButton")
 check_signature_button.grid(row=2, column=0, padx=10, pady=10)
 
-select_key_button = ttk.Button(main_window, text="Select Private Key", command=select_private_key)
+select_key_button = ttk.Button(frame, text="Select Private Key", command=select_private_key, style="Custom.TButton")
 select_key_button.grid(row=3, column=0, padx=10, pady=10)
+
+frame.columnconfigure(0, weight=1)
+frame.rowconfigure(0, weight=1)
 
 usb_thread = threading.Thread(target=detect_pendrive, daemon=True)
 usb_thread.start()
