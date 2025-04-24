@@ -1,0 +1,78 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Namespace Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Namespace List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Namespace Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}generation\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}main Namespace Reference}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Function Documentation}{6}{subsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.1.1}encrypt\_private\_key()}{6}{subsubsection.3.1.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.1.2}generate\_aes\_key()}{6}{subsubsection.3.1.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.1.3}generate\_keys()}{6}{subsubsection.3.1.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.1.4}generate\_rsa\_keys()}{6}{subsubsection.3.1.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.1.5}save\_private()}{7}{subsubsection.3.1.1.5}%
+\contentsline {subsubsection}{\numberline {3.1.1.6}save\_public()}{7}{subsubsection.3.1.1.6}%
+\contentsline {subsubsection}{\numberline {3.1.1.7}update\_task\_progress()}{7}{subsubsection.3.1.1.7}%
+\contentsline {subsection}{\numberline {3.1.2}Variable Documentation}{7}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}aes\_mode}{7}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}background}{7}{subsubsection.3.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.3}column}{7}{subsubsection.3.1.2.3}%
+\contentsline {subsubsection}{\numberline {3.1.2.4}columnspan}{7}{subsubsection.3.1.2.4}%
+\contentsline {subsubsection}{\numberline {3.1.2.5}font}{8}{subsubsection.3.1.2.5}%
+\contentsline {subsubsection}{\numberline {3.1.2.6}gen\_button}{8}{subsubsection.3.1.2.6}%
+\contentsline {subsubsection}{\numberline {3.1.2.7}main\_window}{8}{subsubsection.3.1.2.7}%
+\contentsline {subsubsection}{\numberline {3.1.2.8}padding}{8}{subsubsection.3.1.2.8}%
+\contentsline {subsubsection}{\numberline {3.1.2.9}padx}{8}{subsubsection.3.1.2.9}%
+\contentsline {subsubsection}{\numberline {3.1.2.10}pady}{8}{subsubsection.3.1.2.10}%
+\contentsline {subsubsection}{\numberline {3.1.2.11}passphrase\_entry}{8}{subsubsection.3.1.2.11}%
+\contentsline {subsubsection}{\numberline {3.1.2.12}progress\_bar}{8}{subsubsection.3.1.2.12}%
+\contentsline {subsubsection}{\numberline {3.1.2.13}row}{8}{subsubsection.3.1.2.13}%
+\contentsline {subsubsection}{\numberline {3.1.2.14}rsa\_bits}{8}{subsubsection.3.1.2.14}%
+\contentsline {subsubsection}{\numberline {3.1.2.15}save\_private\_button}{9}{subsubsection.3.1.2.15}%
+\contentsline {subsubsection}{\numberline {3.1.2.16}save\_public\_button}{9}{subsubsection.3.1.2.16}%
+\contentsline {subsubsection}{\numberline {3.1.2.17}status\_label}{9}{subsubsection.3.1.2.17}%
+\contentsline {subsubsection}{\numberline {3.1.2.18}sticky}{9}{subsubsection.3.1.2.18}%
+\contentsline {subsubsection}{\numberline {3.1.2.19}style}{9}{subsubsection.3.1.2.19}%
+\contentsline {subsubsection}{\numberline {3.1.2.20}text}{9}{subsubsection.3.1.2.20}%
+\contentsline {subsubsection}{\numberline {3.1.2.21}thickness}{9}{subsubsection.3.1.2.21}%
+\contentsline {subsubsection}{\numberline {3.1.2.22}weight}{9}{subsubsection.3.1.2.22}%
+\contentsline {section}{\numberline {3.2}signing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}app\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}main Namespace Reference}{9}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Function Documentation}{10}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}adjust\_metadata()}{10}{subsubsection.3.2.1.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.2}check\_signature()}{11}{subsubsection.3.2.1.2}%
+\contentsline {subsubsection}{\numberline {3.2.1.3}decrypt\_private\_key()}{11}{subsubsection.3.2.1.3}%
+\contentsline {subsubsection}{\numberline {3.2.1.4}detect\_pendrive()}{11}{subsubsection.3.2.1.4}%
+\contentsline {subsubsection}{\numberline {3.2.1.5}select\_pdf\_to\_sign()}{11}{subsubsection.3.2.1.5}%
+\contentsline {subsubsection}{\numberline {3.2.1.6}select\_private\_key()}{11}{subsubsection.3.2.1.6}%
+\contentsline {subsubsection}{\numberline {3.2.1.7}sign\_pdf()}{12}{subsubsection.3.2.1.7}%
+\contentsline {subsubsection}{\numberline {3.2.1.8}verify\_signature()}{12}{subsubsection.3.2.1.8}%
+\contentsline {subsection}{\numberline {3.2.2}Variable Documentation}{12}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}aes\_mode}{12}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}anchor}{12}{subsubsection.3.2.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.3}background}{12}{subsubsection.3.2.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.2.4}bg}{12}{subsubsection.3.2.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.2.5}check\_signature\_button}{13}{subsubsection.3.2.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.2.6}column}{13}{subsubsection.3.2.2.6}%
+\contentsline {subsubsection}{\numberline {3.2.2.7}font}{13}{subsubsection.3.2.2.7}%
+\contentsline {subsubsection}{\numberline {3.2.2.8}frame}{13}{subsubsection.3.2.2.8}%
+\contentsline {subsubsection}{\numberline {3.2.2.9}main\_window}{13}{subsubsection.3.2.2.9}%
+\contentsline {subsubsection}{\numberline {3.2.2.10}MANUAL\_KEY\_SELECTION}{13}{subsubsection.3.2.2.10}%
+\contentsline {subsubsection}{\numberline {3.2.2.11}padding}{13}{subsubsection.3.2.2.11}%
+\contentsline {subsubsection}{\numberline {3.2.2.12}padx}{13}{subsubsection.3.2.2.12}%
+\contentsline {subsubsection}{\numberline {3.2.2.13}pady}{13}{subsubsection.3.2.2.13}%
+\contentsline {subsubsection}{\numberline {3.2.2.14}PRIVATE\_KEY}{13}{subsubsection.3.2.2.14}%
+\contentsline {subsubsection}{\numberline {3.2.2.15}relx}{14}{subsubsection.3.2.2.15}%
+\contentsline {subsubsection}{\numberline {3.2.2.16}rely}{14}{subsubsection.3.2.2.16}%
+\contentsline {subsubsection}{\numberline {3.2.2.17}row}{14}{subsubsection.3.2.2.17}%
+\contentsline {subsubsection}{\numberline {3.2.2.18}select\_key\_button}{14}{subsubsection.3.2.2.18}%
+\contentsline {subsubsection}{\numberline {3.2.2.19}sign\_pdf\_button}{14}{subsubsection.3.2.2.19}%
+\contentsline {subsubsection}{\numberline {3.2.2.20}sticky}{14}{subsubsection.3.2.2.20}%
+\contentsline {subsubsection}{\numberline {3.2.2.21}style}{14}{subsubsection.3.2.2.21}%
+\contentsline {subsubsection}{\numberline {3.2.2.22}usb\_status\_label}{14}{subsubsection.3.2.2.22}%
+\contentsline {subsubsection}{\numberline {3.2.2.23}usb\_thread}{14}{subsubsection.3.2.2.23}%
+\contentsline {subsubsection}{\numberline {3.2.2.24}weight}{14}{subsubsection.3.2.2.24}%
+\contentsline {chapter}{\numberline {4}File Documentation}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}generation\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}app/key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}generation\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}main.py File Reference}{15}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{16}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}signing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}app/signing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}app\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}main.py File Reference}{16}{section.4.2}%
+\contentsline {chapter}{Index}{19}{section*.11}%

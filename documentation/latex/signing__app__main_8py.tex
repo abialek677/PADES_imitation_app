@@ -1,0 +1,77 @@
+\doxysection{signing\+\_\+app/signing\+\_\+app\+\_\+main.py File Reference}
+\hypertarget{signing__app__main_8py}{}\label{signing__app__main_8py}\index{signing\_app/signing\_app\_main.py@{signing\_app/signing\_app\_main.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacesigning__app__main}{signing\+\_\+app\+\_\+main}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_ae8b455614d23fbf7be90b7fde32b7c6b}{signing\+\_\+app\+\_\+main.\+decrypt\+\_\+private\+\_\+key}} (pk\+\_\+path, passphrase)
+\item 
+bytes \mbox{\hyperlink{namespacesigning__app__main_a36d84176b370cb65e533b3d2b1ac96bd}{signing\+\_\+app\+\_\+main.\+adjust\+\_\+metadata}} (str pdf\+\_\+path, Optional\mbox{[}List\mbox{[}str\mbox{]}\mbox{]} remove\+\_\+fields\+\_\+metadata=None, Optional\mbox{[}Dict\mbox{[}str, Any\mbox{]}\mbox{]} add\+\_\+fields\+\_\+metadata=None)
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a296e1aaaf751d2c62acfc825321d8625}{signing\+\_\+app\+\_\+main.\+sign\+\_\+pdf}} (private\+\_\+key\+\_\+pem, pdf\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a2419bdf6798de9ff6480e1114b4c5c25}{signing\+\_\+app\+\_\+main.\+verify\+\_\+signature}} (signed\+\_\+pdf\+\_\+path, public\+\_\+key\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a5db578db1775710c0e8a30dda2fab022}{signing\+\_\+app\+\_\+main.\+detect\+\_\+pendrive}} ()
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a9a32d8f329e28ba461e38e8d80ac2ceb}{signing\+\_\+app\+\_\+main.\+select\+\_\+pdf\+\_\+to\+\_\+sign}} ()
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a1989638fd43eabd42455d480f43c3209}{signing\+\_\+app\+\_\+main.\+check\+\_\+signature}} ()
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a0db7932410f22732f0e839adc111d169}{signing\+\_\+app\+\_\+main.\+select\+\_\+private\+\_\+key}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_af44705a524144d78cc642cf489b30e80}{signing\+\_\+app\+\_\+main.\+aes\+\_\+mode}} = AES.\+MODE\+\_\+\+GCM
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a9f99ba1c86c156364df14615d3db849f}{signing\+\_\+app\+\_\+main.\+PRIVATE\+\_\+\+KEY}} = None
+\item 
+bool \mbox{\hyperlink{namespacesigning__app__main_abce5794c17512cfefdaf5fb7d6306f3f}{signing\+\_\+app\+\_\+main.\+MANUAL\+\_\+\+KEY\+\_\+\+SELECTION}} = False
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a1ef6ec2a18f86a7ae10c352b7aaf044c}{signing\+\_\+app\+\_\+main.\+main\+\_\+window}} = tk.\+Tk()
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_acbd8018c2c8f6b3dfbf935d47331d961}{signing\+\_\+app\+\_\+main.\+weight}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_afbd0d038ec8de68df79f90d958d5fae4}{signing\+\_\+app\+\_\+main.\+bg}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_ac0a5b25287e2a78fa2b60ae616b257ef}{signing\+\_\+app\+\_\+main.\+style}} = ttk.\+Style()
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a3f4835b45af96ea7dacfd53e7e1b12e4}{signing\+\_\+app\+\_\+main.\+padding}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a042c9b6c9c32991f2f66586bc46aa266}{signing\+\_\+app\+\_\+main.\+font}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a1c00a65ba58f86901bbb20b056664bf0}{signing\+\_\+app\+\_\+main.\+background}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a5879231da862a529c051c81f3007c344}{signing\+\_\+app\+\_\+main.\+frame}} = ttk.\+Frame(\mbox{\hyperlink{namespacesigning__app__main_a1ef6ec2a18f86a7ae10c352b7aaf044c}{main\+\_\+window}}, \mbox{\hyperlink{namespacesigning__app__main_a3f4835b45af96ea7dacfd53e7e1b12e4}{padding}}=20)
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a65f0121cf3def5d3461cf954a3f36be3}{signing\+\_\+app\+\_\+main.\+relx}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a3976f312ea8aa1bd72210e0687a88237}{signing\+\_\+app\+\_\+main.\+rely}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a28863b21b915e7cd233bad744fae1a09}{signing\+\_\+app\+\_\+main.\+anchor}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a0e38281daad79309eacbdc8da1203a36}{signing\+\_\+app\+\_\+main.\+row}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a88b85eedcb640eb7d0ee7ead87562af7}{signing\+\_\+app\+\_\+main.\+column}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a1899ff635f452dadd52f4f803ae2433a}{signing\+\_\+app\+\_\+main.\+sticky}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a25cbf5fc718f1a2a6e539625c6d7b7d9}{signing\+\_\+app\+\_\+main.\+sign\+\_\+pdf\+\_\+button}} = ttk.\+Button(\mbox{\hyperlink{namespacesigning__app__main_a5879231da862a529c051c81f3007c344}{frame}}, text="{}Sign PDF"{}, state=tk.\+DISABLED, command=\mbox{\hyperlink{namespacesigning__app__main_a9a32d8f329e28ba461e38e8d80ac2ceb}{select\+\_\+pdf\+\_\+to\+\_\+sign}}, \mbox{\hyperlink{namespacesigning__app__main_ac0a5b25287e2a78fa2b60ae616b257ef}{style}}="{}Custom.\+TButton"{})
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a6bf98172ff795f4a2a3a9affe8321e81}{signing\+\_\+app\+\_\+main.\+padx}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_abd2b2e27e9f6fb3167709562cf7135a2}{signing\+\_\+app\+\_\+main.\+pady}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a9bf1b0cead0e023749fe749edacd687b}{signing\+\_\+app\+\_\+main.\+usb\+\_\+status\+\_\+label}} = ttk.\+Label(\mbox{\hyperlink{namespacesigning__app__main_a5879231da862a529c051c81f3007c344}{frame}}, text="{}There are no keys on USB detected"{}, \mbox{\hyperlink{namespacesigning__app__main_a042c9b6c9c32991f2f66586bc46aa266}{font}}=("{}Arial"{}, 10))
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_ad35e6a4e3b9e0126a8936e4c1c6376a5}{signing\+\_\+app\+\_\+main.\+check\+\_\+signature\+\_\+button}} = ttk.\+Button(\mbox{\hyperlink{namespacesigning__app__main_a5879231da862a529c051c81f3007c344}{frame}}, text="{}Check Signature"{}, command=\mbox{\hyperlink{namespacesigning__app__main_a1989638fd43eabd42455d480f43c3209}{check\+\_\+signature}}, \mbox{\hyperlink{namespacesigning__app__main_ac0a5b25287e2a78fa2b60ae616b257ef}{style}}="{}Custom.\+TButton"{})
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_afd5ccf66412fdbd9de5882652c70c35c}{signing\+\_\+app\+\_\+main.\+select\+\_\+key\+\_\+button}} = ttk.\+Button(\mbox{\hyperlink{namespacesigning__app__main_a5879231da862a529c051c81f3007c344}{frame}}, text="{}Select Private Key"{}, command=\mbox{\hyperlink{namespacesigning__app__main_a0db7932410f22732f0e839adc111d169}{select\+\_\+private\+\_\+key}}, \mbox{\hyperlink{namespacesigning__app__main_ac0a5b25287e2a78fa2b60ae616b257ef}{style}}="{}Custom.\+TButton"{})
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_abec01c90a1c1956ac9b82970ecb446da}{signing\+\_\+app\+\_\+main.\+usb\+\_\+thread}} = threading.\+Thread(target=\mbox{\hyperlink{namespacesigning__app__main_a5db578db1775710c0e8a30dda2fab022}{detect\+\_\+pendrive}}, daemon=True)
+\end{DoxyCompactItemize}
