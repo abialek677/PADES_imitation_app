@@ -1,0 +1,282 @@
+\doxysection{key\+\_\+generation\+\_\+main Namespace Reference}
+\hypertarget{namespacekey__generation__main}{}\label{namespacekey__generation__main}\index{key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_a84b709bd6b511573f17af37e15ba2eb3}{encrypt\+\_\+private\+\_\+key}} (pk, pin)
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_aa303464313cbf8a5ef43d04c9788f6c8}{generate\+\_\+rsa\+\_\+keys}} ()
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_a99e2b09d823696f6051b4733883f4f30}{generate\+\_\+aes\+\_\+key}} (pin, salt)
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_af6159b509718115d5e153f64f1a39d89}{update\+\_\+task\+\_\+progress}} (value, \mbox{\hyperlink{namespacekey__generation__main_ae4b61fa6278cfb77a0401835fe9f4a40}{text}})
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_a52c4be75f7db0d6b3875eff1110c5b14}{generate\+\_\+keys}} ()
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_a15b4f2d1fd11e6c4f3c91b42b93de035}{save\+\_\+public}} ()
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_ade71984d074ee822445c39ad9ce79117}{save\+\_\+private}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacekey__generation__main_afe2bdc192f5fb0957e2414d4fa19450a}{rsa\+\_\+bits}} = 4096
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_afbe569fed79f96cd3285887d6bfaf558}{aes\+\_\+mode}} = AES.\+MODE\+\_\+\+GCM
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_aeafa833986de5053ca3cf94924fe7c26}{main\+\_\+window}} = tk.\+Tk()
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_a0ed6c57fe5bfc6057687914466d91169}{background}}
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_a80e64e69e180808872c4c89781ac1943}{style}} = ttk.\+Style()
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_ae010bf29c6bd41dcb367aae69a65dbcf}{padding}}
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_a60d1d0159c0c7d3c061bfbc20d8bb090}{font}}
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_af4dc79c6debe2eef94a7f0096a89dd11}{thickness}}
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_a3803300b0807767a7f742101bcca0fd0}{weight}}
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_ae4b61fa6278cfb77a0401835fe9f4a40}{text}}
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_aaca01bba07f1cffe4b4f2a24f0277e25}{row}}
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_a4dc4c772e209bfaeed80481ea1343bda}{column}}
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_a4e733fb11dbacb581ad66f029b5f1f65}{padx}}
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_afe388e244adf7e9c94651e5d840f6f56}{pady}}
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_a661ae48f7d8cb25d3848727abd3ba625}{sticky}}
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_aee500bb5a34d2642235de857d236e451}{passphrase\+\_\+entry}} = ttk.\+Entry(\mbox{\hyperlink{namespacekey__generation__main_aeafa833986de5053ca3cf94924fe7c26}{main\+\_\+window}}, show="{}\texorpdfstring{$\ast$}{*}"{})
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_a03b94bce63da2fd5a93cb135fe3b12ca}{gen\+\_\+button}} = ttk.\+Button(\mbox{\hyperlink{namespacekey__generation__main_aeafa833986de5053ca3cf94924fe7c26}{main\+\_\+window}}, \mbox{\hyperlink{namespacekey__generation__main_ae4b61fa6278cfb77a0401835fe9f4a40}{text}}="{}Generate Keys"{}, command=\mbox{\hyperlink{namespacekey__generation__main_a52c4be75f7db0d6b3875eff1110c5b14}{generate\+\_\+keys}}, \mbox{\hyperlink{namespacekey__generation__main_a80e64e69e180808872c4c89781ac1943}{style}}="{}Custom.\+TButton"{})
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_a9c3ae428addd9f40c02d92dead06e6d5}{columnspan}}
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_a0c16db3cb0e4d32930057e7f1210a225}{progress\+\_\+bar}} = ttk.\+Progressbar(\mbox{\hyperlink{namespacekey__generation__main_aeafa833986de5053ca3cf94924fe7c26}{main\+\_\+window}}, length=290)
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_afbd5a12f493edf6fbc668c5b1a5b1354}{status\+\_\+label}} = ttk.\+Label(\mbox{\hyperlink{namespacekey__generation__main_aeafa833986de5053ca3cf94924fe7c26}{main\+\_\+window}}, \mbox{\hyperlink{namespacekey__generation__main_ae4b61fa6278cfb77a0401835fe9f4a40}{text}}="{}"{}, \mbox{\hyperlink{namespacekey__generation__main_a60d1d0159c0c7d3c061bfbc20d8bb090}{font}}=("{}Arial"{}, 10))
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_a192d9e7874b27861e6cfa784d202792a}{save\+\_\+public\+\_\+button}} = ttk.\+Button(\mbox{\hyperlink{namespacekey__generation__main_aeafa833986de5053ca3cf94924fe7c26}{main\+\_\+window}}, \mbox{\hyperlink{namespacekey__generation__main_ae4b61fa6278cfb77a0401835fe9f4a40}{text}}="{}Save Public Key"{}, command=\mbox{\hyperlink{namespacekey__generation__main_a15b4f2d1fd11e6c4f3c91b42b93de035}{save\+\_\+public}}, state=tk.\+DISABLED, \mbox{\hyperlink{namespacekey__generation__main_a80e64e69e180808872c4c89781ac1943}{style}}="{}Custom.\+TButton"{})
+\item 
+\mbox{\hyperlink{namespacekey__generation__main_a2cd0b31c4f3a750ec2bf0193382c9c57}{save\+\_\+private\+\_\+button}} = ttk.\+Button(\mbox{\hyperlink{namespacekey__generation__main_aeafa833986de5053ca3cf94924fe7c26}{main\+\_\+window}}, \mbox{\hyperlink{namespacekey__generation__main_ae4b61fa6278cfb77a0401835fe9f4a40}{text}}="{}Save Private Key"{}, command=\mbox{\hyperlink{namespacekey__generation__main_ade71984d074ee822445c39ad9ce79117}{save\+\_\+private}}, state=tk.\+DISABLED, \mbox{\hyperlink{namespacekey__generation__main_a80e64e69e180808872c4c89781ac1943}{style}}="{}Custom.\+TButton"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacekey__generation__main_a84b709bd6b511573f17af37e15ba2eb3}\index{key\_generation\_main@{key\_generation\_main}!encrypt\_private\_key@{encrypt\_private\_key}}
+\index{encrypt\_private\_key@{encrypt\_private\_key}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{encrypt\_private\_key()}{encrypt\_private\_key()}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_a84b709bd6b511573f17af37e15ba2eb3} 
+key\+\_\+generation\+\_\+main.\+encrypt\+\_\+private\+\_\+key (\begin{DoxyParamCaption}\item[{}]{pk}{, }\item[{}]{pin}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    @brief Encrypts a private RSA key using a PIN.
+
+    @param pk The private RSA key to encrypt.
+    @param pin The PIN used to encrypt the key.
+
+    @return The encrypted key data.
+\end{DoxyVerb}
+ \Hypertarget{namespacekey__generation__main_a99e2b09d823696f6051b4733883f4f30}\index{key\_generation\_main@{key\_generation\_main}!generate\_aes\_key@{generate\_aes\_key}}
+\index{generate\_aes\_key@{generate\_aes\_key}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{generate\_aes\_key()}{generate\_aes\_key()}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_a99e2b09d823696f6051b4733883f4f30} 
+key\+\_\+generation\+\_\+main.\+generate\+\_\+aes\+\_\+key (\begin{DoxyParamCaption}\item[{}]{pin}{, }\item[{}]{salt}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    @brief Generates an AES encryption key based on a PIN and salt.
+
+    @param pin The user's PIN used for key derivation.
+    @param salt The salt used in the key derivation process.
+
+    @return The derived AES key.
+\end{DoxyVerb}
+ \Hypertarget{namespacekey__generation__main_a52c4be75f7db0d6b3875eff1110c5b14}\index{key\_generation\_main@{key\_generation\_main}!generate\_keys@{generate\_keys}}
+\index{generate\_keys@{generate\_keys}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{generate\_keys()}{generate\_keys()}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_a52c4be75f7db0d6b3875eff1110c5b14} 
+key\+\_\+generation\+\_\+main.\+generate\+\_\+keys (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    @brief Initiates the RSA and AES key generation process
+
+    This function coordinates the creation of RSA and AES keys,
+    and may update the UI to reflect progress.
+\end{DoxyVerb}
+ \Hypertarget{namespacekey__generation__main_aa303464313cbf8a5ef43d04c9788f6c8}\index{key\_generation\_main@{key\_generation\_main}!generate\_rsa\_keys@{generate\_rsa\_keys}}
+\index{generate\_rsa\_keys@{generate\_rsa\_keys}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{generate\_rsa\_keys()}{generate\_rsa\_keys()}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_aa303464313cbf8a5ef43d04c9788f6c8} 
+key\+\_\+generation\+\_\+main.\+generate\+\_\+rsa\+\_\+keys (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    @brief Generates a new RSA key pair (private and public keys).
+
+    @return A tuple containing the private key and public key.
+\end{DoxyVerb}
+ \Hypertarget{namespacekey__generation__main_ade71984d074ee822445c39ad9ce79117}\index{key\_generation\_main@{key\_generation\_main}!save\_private@{save\_private}}
+\index{save\_private@{save\_private}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{save\_private()}{save\_private()}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_ade71984d074ee822445c39ad9ce79117} 
+key\+\_\+generation\+\_\+main.\+save\+\_\+private (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}   @brief Saves the encrypted private key to a file.
+
+   Asks the user to choose a location and writes the key securely.
+\end{DoxyVerb}
+ \Hypertarget{namespacekey__generation__main_a15b4f2d1fd11e6c4f3c91b42b93de035}\index{key\_generation\_main@{key\_generation\_main}!save\_public@{save\_public}}
+\index{save\_public@{save\_public}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{save\_public()}{save\_public()}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_a15b4f2d1fd11e6c4f3c91b42b93de035} 
+key\+\_\+generation\+\_\+main.\+save\+\_\+public (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}   @brief Saves the generated public key to a file.
+
+   Asks the user to choose a location and writes the key in PEM format.
+\end{DoxyVerb}
+ \Hypertarget{namespacekey__generation__main_af6159b509718115d5e153f64f1a39d89}\index{key\_generation\_main@{key\_generation\_main}!update\_task\_progress@{update\_task\_progress}}
+\index{update\_task\_progress@{update\_task\_progress}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{update\_task\_progress()}{update\_task\_progress()}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_af6159b509718115d5e153f64f1a39d89} 
+key\+\_\+generation\+\_\+main.\+update\+\_\+task\+\_\+progress (\begin{DoxyParamCaption}\item[{}]{value}{, }\item[{}]{text}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}   @brief Updates the GUI task progress bar and status message.
+
+   @param value The progress percentage (0–100).
+   @param text The status message to display.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacekey__generation__main_afbe569fed79f96cd3285887d6bfaf558}\index{key\_generation\_main@{key\_generation\_main}!aes\_mode@{aes\_mode}}
+\index{aes\_mode@{aes\_mode}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{aes\_mode}{aes\_mode}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_afbe569fed79f96cd3285887d6bfaf558} 
+key\+\_\+generation\+\_\+main.\+aes\+\_\+mode = AES.\+MODE\+\_\+\+GCM}
+
+\Hypertarget{namespacekey__generation__main_a0ed6c57fe5bfc6057687914466d91169}\index{key\_generation\_main@{key\_generation\_main}!background@{background}}
+\index{background@{background}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{background}{background}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_a0ed6c57fe5bfc6057687914466d91169} 
+key\+\_\+generation\+\_\+main.\+background}
+
+\Hypertarget{namespacekey__generation__main_a4dc4c772e209bfaeed80481ea1343bda}\index{key\_generation\_main@{key\_generation\_main}!column@{column}}
+\index{column@{column}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{column}{column}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_a4dc4c772e209bfaeed80481ea1343bda} 
+key\+\_\+generation\+\_\+main.\+column}
+
+\Hypertarget{namespacekey__generation__main_a9c3ae428addd9f40c02d92dead06e6d5}\index{key\_generation\_main@{key\_generation\_main}!columnspan@{columnspan}}
+\index{columnspan@{columnspan}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{columnspan}{columnspan}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_a9c3ae428addd9f40c02d92dead06e6d5} 
+key\+\_\+generation\+\_\+main.\+columnspan}
+
+\Hypertarget{namespacekey__generation__main_a60d1d0159c0c7d3c061bfbc20d8bb090}\index{key\_generation\_main@{key\_generation\_main}!font@{font}}
+\index{font@{font}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_a60d1d0159c0c7d3c061bfbc20d8bb090} 
+key\+\_\+generation\+\_\+main.\+font}
+
+\Hypertarget{namespacekey__generation__main_a03b94bce63da2fd5a93cb135fe3b12ca}\index{key\_generation\_main@{key\_generation\_main}!gen\_button@{gen\_button}}
+\index{gen\_button@{gen\_button}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{gen\_button}{gen\_button}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_a03b94bce63da2fd5a93cb135fe3b12ca} 
+key\+\_\+generation\+\_\+main.\+gen\+\_\+button = ttk.\+Button(\mbox{\hyperlink{namespacekey__generation__main_aeafa833986de5053ca3cf94924fe7c26}{main\+\_\+window}}, \mbox{\hyperlink{namespacekey__generation__main_ae4b61fa6278cfb77a0401835fe9f4a40}{text}}="{}Generate Keys"{}, command=\mbox{\hyperlink{namespacekey__generation__main_a52c4be75f7db0d6b3875eff1110c5b14}{generate\+\_\+keys}}, \mbox{\hyperlink{namespacekey__generation__main_a80e64e69e180808872c4c89781ac1943}{style}}="{}Custom.\+TButton"{})}
+
+\Hypertarget{namespacekey__generation__main_aeafa833986de5053ca3cf94924fe7c26}\index{key\_generation\_main@{key\_generation\_main}!main\_window@{main\_window}}
+\index{main\_window@{main\_window}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{main\_window}{main\_window}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_aeafa833986de5053ca3cf94924fe7c26} 
+key\+\_\+generation\+\_\+main.\+main\+\_\+window = tk.\+Tk()}
+
+\Hypertarget{namespacekey__generation__main_ae010bf29c6bd41dcb367aae69a65dbcf}\index{key\_generation\_main@{key\_generation\_main}!padding@{padding}}
+\index{padding@{padding}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{padding}{padding}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_ae010bf29c6bd41dcb367aae69a65dbcf} 
+key\+\_\+generation\+\_\+main.\+padding}
+
+\Hypertarget{namespacekey__generation__main_a4e733fb11dbacb581ad66f029b5f1f65}\index{key\_generation\_main@{key\_generation\_main}!padx@{padx}}
+\index{padx@{padx}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{padx}{padx}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_a4e733fb11dbacb581ad66f029b5f1f65} 
+key\+\_\+generation\+\_\+main.\+padx}
+
+\Hypertarget{namespacekey__generation__main_afe388e244adf7e9c94651e5d840f6f56}\index{key\_generation\_main@{key\_generation\_main}!pady@{pady}}
+\index{pady@{pady}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{pady}{pady}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_afe388e244adf7e9c94651e5d840f6f56} 
+key\+\_\+generation\+\_\+main.\+pady}
+
+\Hypertarget{namespacekey__generation__main_aee500bb5a34d2642235de857d236e451}\index{key\_generation\_main@{key\_generation\_main}!passphrase\_entry@{passphrase\_entry}}
+\index{passphrase\_entry@{passphrase\_entry}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{passphrase\_entry}{passphrase\_entry}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_aee500bb5a34d2642235de857d236e451} 
+key\+\_\+generation\+\_\+main.\+passphrase\+\_\+entry = ttk.\+Entry(\mbox{\hyperlink{namespacekey__generation__main_aeafa833986de5053ca3cf94924fe7c26}{main\+\_\+window}}, show="{}\texorpdfstring{$\ast$}{*}"{})}
+
+\Hypertarget{namespacekey__generation__main_a0c16db3cb0e4d32930057e7f1210a225}\index{key\_generation\_main@{key\_generation\_main}!progress\_bar@{progress\_bar}}
+\index{progress\_bar@{progress\_bar}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{progress\_bar}{progress\_bar}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_a0c16db3cb0e4d32930057e7f1210a225} 
+key\+\_\+generation\+\_\+main.\+progress\+\_\+bar = ttk.\+Progressbar(\mbox{\hyperlink{namespacekey__generation__main_aeafa833986de5053ca3cf94924fe7c26}{main\+\_\+window}}, length=290)}
+
+\Hypertarget{namespacekey__generation__main_aaca01bba07f1cffe4b4f2a24f0277e25}\index{key\_generation\_main@{key\_generation\_main}!row@{row}}
+\index{row@{row}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_aaca01bba07f1cffe4b4f2a24f0277e25} 
+key\+\_\+generation\+\_\+main.\+row}
+
+\Hypertarget{namespacekey__generation__main_afe2bdc192f5fb0957e2414d4fa19450a}\index{key\_generation\_main@{key\_generation\_main}!rsa\_bits@{rsa\_bits}}
+\index{rsa\_bits@{rsa\_bits}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{rsa\_bits}{rsa\_bits}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_afe2bdc192f5fb0957e2414d4fa19450a} 
+int key\+\_\+generation\+\_\+main.\+rsa\+\_\+bits = 4096}
+
+\Hypertarget{namespacekey__generation__main_a2cd0b31c4f3a750ec2bf0193382c9c57}\index{key\_generation\_main@{key\_generation\_main}!save\_private\_button@{save\_private\_button}}
+\index{save\_private\_button@{save\_private\_button}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{save\_private\_button}{save\_private\_button}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_a2cd0b31c4f3a750ec2bf0193382c9c57} 
+key\+\_\+generation\+\_\+main.\+save\+\_\+private\+\_\+button = ttk.\+Button(\mbox{\hyperlink{namespacekey__generation__main_aeafa833986de5053ca3cf94924fe7c26}{main\+\_\+window}}, \mbox{\hyperlink{namespacekey__generation__main_ae4b61fa6278cfb77a0401835fe9f4a40}{text}}="{}Save Private Key"{}, command=\mbox{\hyperlink{namespacekey__generation__main_ade71984d074ee822445c39ad9ce79117}{save\+\_\+private}}, state=tk.\+DISABLED, \mbox{\hyperlink{namespacekey__generation__main_a80e64e69e180808872c4c89781ac1943}{style}}="{}Custom.\+TButton"{})}
+
+\Hypertarget{namespacekey__generation__main_a192d9e7874b27861e6cfa784d202792a}\index{key\_generation\_main@{key\_generation\_main}!save\_public\_button@{save\_public\_button}}
+\index{save\_public\_button@{save\_public\_button}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{save\_public\_button}{save\_public\_button}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_a192d9e7874b27861e6cfa784d202792a} 
+key\+\_\+generation\+\_\+main.\+save\+\_\+public\+\_\+button = ttk.\+Button(\mbox{\hyperlink{namespacekey__generation__main_aeafa833986de5053ca3cf94924fe7c26}{main\+\_\+window}}, \mbox{\hyperlink{namespacekey__generation__main_ae4b61fa6278cfb77a0401835fe9f4a40}{text}}="{}Save Public Key"{}, command=\mbox{\hyperlink{namespacekey__generation__main_a15b4f2d1fd11e6c4f3c91b42b93de035}{save\+\_\+public}}, state=tk.\+DISABLED, \mbox{\hyperlink{namespacekey__generation__main_a80e64e69e180808872c4c89781ac1943}{style}}="{}Custom.\+TButton"{})}
+
+\Hypertarget{namespacekey__generation__main_afbd5a12f493edf6fbc668c5b1a5b1354}\index{key\_generation\_main@{key\_generation\_main}!status\_label@{status\_label}}
+\index{status\_label@{status\_label}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{status\_label}{status\_label}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_afbd5a12f493edf6fbc668c5b1a5b1354} 
+key\+\_\+generation\+\_\+main.\+status\+\_\+label = ttk.\+Label(\mbox{\hyperlink{namespacekey__generation__main_aeafa833986de5053ca3cf94924fe7c26}{main\+\_\+window}}, \mbox{\hyperlink{namespacekey__generation__main_ae4b61fa6278cfb77a0401835fe9f4a40}{text}}="{}"{}, \mbox{\hyperlink{namespacekey__generation__main_a60d1d0159c0c7d3c061bfbc20d8bb090}{font}}=("{}Arial"{}, 10))}
+
+\Hypertarget{namespacekey__generation__main_a661ae48f7d8cb25d3848727abd3ba625}\index{key\_generation\_main@{key\_generation\_main}!sticky@{sticky}}
+\index{sticky@{sticky}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{sticky}{sticky}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_a661ae48f7d8cb25d3848727abd3ba625} 
+key\+\_\+generation\+\_\+main.\+sticky}
+
+\Hypertarget{namespacekey__generation__main_a80e64e69e180808872c4c89781ac1943}\index{key\_generation\_main@{key\_generation\_main}!style@{style}}
+\index{style@{style}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{style}{style}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_a80e64e69e180808872c4c89781ac1943} 
+key\+\_\+generation\+\_\+main.\+style = ttk.\+Style()}
+
+\Hypertarget{namespacekey__generation__main_ae4b61fa6278cfb77a0401835fe9f4a40}\index{key\_generation\_main@{key\_generation\_main}!text@{text}}
+\index{text@{text}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_ae4b61fa6278cfb77a0401835fe9f4a40} 
+key\+\_\+generation\+\_\+main.\+text}
+
+\Hypertarget{namespacekey__generation__main_af4dc79c6debe2eef94a7f0096a89dd11}\index{key\_generation\_main@{key\_generation\_main}!thickness@{thickness}}
+\index{thickness@{thickness}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{thickness}{thickness}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_af4dc79c6debe2eef94a7f0096a89dd11} 
+key\+\_\+generation\+\_\+main.\+thickness}
+
+\Hypertarget{namespacekey__generation__main_a3803300b0807767a7f742101bcca0fd0}\index{key\_generation\_main@{key\_generation\_main}!weight@{weight}}
+\index{weight@{weight}!key\_generation\_main@{key\_generation\_main}}
+\doxysubsubsection{\texorpdfstring{weight}{weight}}
+{\footnotesize\ttfamily \label{namespacekey__generation__main_a3803300b0807767a7f742101bcca0fd0} 
+key\+\_\+generation\+\_\+main.\+weight}
+

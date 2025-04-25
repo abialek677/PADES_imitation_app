@@ -1,0 +1,16 @@
+PROJECT_NAME           = "PADES_imitation_app"
+
+INPUT                  = key_generation_app/ signing_app/
+RECURSIVE              = YES
+FILE_PATTERNS          = *.py
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+OPTIMIZE_OUTPUT_FOR_C  = NO
+OPTIMIZE_OUTPUT_JAVA   = NO
+OPTIMIZE_OUTPUT_SLICE  = NO
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = YES

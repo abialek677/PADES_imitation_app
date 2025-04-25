@@ -1,0 +1,329 @@
+\doxysection{signing\+\_\+app\+\_\+main Namespace Reference}
+\hypertarget{namespacesigning__app__main}{}\label{namespacesigning__app__main}\index{signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_ae8b455614d23fbf7be90b7fde32b7c6b}{decrypt\+\_\+private\+\_\+key}} (pk\+\_\+path, passphrase)
+\item 
+bytes \mbox{\hyperlink{namespacesigning__app__main_a36d84176b370cb65e533b3d2b1ac96bd}{adjust\+\_\+metadata}} (str pdf\+\_\+path, Optional\mbox{[}List\mbox{[}str\mbox{]}\mbox{]} remove\+\_\+fields\+\_\+metadata=None, Optional\mbox{[}Dict\mbox{[}str, Any\mbox{]}\mbox{]} add\+\_\+fields\+\_\+metadata=None)
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a296e1aaaf751d2c62acfc825321d8625}{sign\+\_\+pdf}} (private\+\_\+key\+\_\+pem, pdf\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a2419bdf6798de9ff6480e1114b4c5c25}{verify\+\_\+signature}} (signed\+\_\+pdf\+\_\+path, public\+\_\+key\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a5db578db1775710c0e8a30dda2fab022}{detect\+\_\+pendrive}} ()
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a9a32d8f329e28ba461e38e8d80ac2ceb}{select\+\_\+pdf\+\_\+to\+\_\+sign}} ()
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a1989638fd43eabd42455d480f43c3209}{check\+\_\+signature}} ()
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a0db7932410f22732f0e839adc111d169}{select\+\_\+private\+\_\+key}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_af44705a524144d78cc642cf489b30e80}{aes\+\_\+mode}} = AES.\+MODE\+\_\+\+GCM
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a9f99ba1c86c156364df14615d3db849f}{PRIVATE\+\_\+\+KEY}} = None
+\item 
+bool \mbox{\hyperlink{namespacesigning__app__main_abce5794c17512cfefdaf5fb7d6306f3f}{MANUAL\+\_\+\+KEY\+\_\+\+SELECTION}} = False
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a1ef6ec2a18f86a7ae10c352b7aaf044c}{main\+\_\+window}} = tk.\+Tk()
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_acbd8018c2c8f6b3dfbf935d47331d961}{weight}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_afbd0d038ec8de68df79f90d958d5fae4}{bg}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_ac0a5b25287e2a78fa2b60ae616b257ef}{style}} = ttk.\+Style()
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a3f4835b45af96ea7dacfd53e7e1b12e4}{padding}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a042c9b6c9c32991f2f66586bc46aa266}{font}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a1c00a65ba58f86901bbb20b056664bf0}{background}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a5879231da862a529c051c81f3007c344}{frame}} = ttk.\+Frame(\mbox{\hyperlink{namespacesigning__app__main_a1ef6ec2a18f86a7ae10c352b7aaf044c}{main\+\_\+window}}, \mbox{\hyperlink{namespacesigning__app__main_a3f4835b45af96ea7dacfd53e7e1b12e4}{padding}}=20)
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a65f0121cf3def5d3461cf954a3f36be3}{relx}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a3976f312ea8aa1bd72210e0687a88237}{rely}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a28863b21b915e7cd233bad744fae1a09}{anchor}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a0e38281daad79309eacbdc8da1203a36}{row}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a88b85eedcb640eb7d0ee7ead87562af7}{column}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a1899ff635f452dadd52f4f803ae2433a}{sticky}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a25cbf5fc718f1a2a6e539625c6d7b7d9}{sign\+\_\+pdf\+\_\+button}} = ttk.\+Button(\mbox{\hyperlink{namespacesigning__app__main_a5879231da862a529c051c81f3007c344}{frame}}, text="{}Sign PDF"{}, state=tk.\+DISABLED, command=\mbox{\hyperlink{namespacesigning__app__main_a9a32d8f329e28ba461e38e8d80ac2ceb}{select\+\_\+pdf\+\_\+to\+\_\+sign}}, \mbox{\hyperlink{namespacesigning__app__main_ac0a5b25287e2a78fa2b60ae616b257ef}{style}}="{}Custom.\+TButton"{})
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a6bf98172ff795f4a2a3a9affe8321e81}{padx}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_abd2b2e27e9f6fb3167709562cf7135a2}{pady}}
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_a9bf1b0cead0e023749fe749edacd687b}{usb\+\_\+status\+\_\+label}} = ttk.\+Label(\mbox{\hyperlink{namespacesigning__app__main_a5879231da862a529c051c81f3007c344}{frame}}, text="{}There are no keys on USB detected"{}, \mbox{\hyperlink{namespacesigning__app__main_a042c9b6c9c32991f2f66586bc46aa266}{font}}=("{}Arial"{}, 10))
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_ad35e6a4e3b9e0126a8936e4c1c6376a5}{check\+\_\+signature\+\_\+button}} = ttk.\+Button(\mbox{\hyperlink{namespacesigning__app__main_a5879231da862a529c051c81f3007c344}{frame}}, text="{}Check Signature"{}, command=\mbox{\hyperlink{namespacesigning__app__main_a1989638fd43eabd42455d480f43c3209}{check\+\_\+signature}}, \mbox{\hyperlink{namespacesigning__app__main_ac0a5b25287e2a78fa2b60ae616b257ef}{style}}="{}Custom.\+TButton"{})
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_afd5ccf66412fdbd9de5882652c70c35c}{select\+\_\+key\+\_\+button}} = ttk.\+Button(\mbox{\hyperlink{namespacesigning__app__main_a5879231da862a529c051c81f3007c344}{frame}}, text="{}Select Private Key"{}, command=\mbox{\hyperlink{namespacesigning__app__main_a0db7932410f22732f0e839adc111d169}{select\+\_\+private\+\_\+key}}, \mbox{\hyperlink{namespacesigning__app__main_ac0a5b25287e2a78fa2b60ae616b257ef}{style}}="{}Custom.\+TButton"{})
+\item 
+\mbox{\hyperlink{namespacesigning__app__main_abec01c90a1c1956ac9b82970ecb446da}{usb\+\_\+thread}} = threading.\+Thread(target=\mbox{\hyperlink{namespacesigning__app__main_a5db578db1775710c0e8a30dda2fab022}{detect\+\_\+pendrive}}, daemon=True)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacesigning__app__main_a36d84176b370cb65e533b3d2b1ac96bd}\index{signing\_app\_main@{signing\_app\_main}!adjust\_metadata@{adjust\_metadata}}
+\index{adjust\_metadata@{adjust\_metadata}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{adjust\_metadata()}{adjust\_metadata()}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a36d84176b370cb65e533b3d2b1ac96bd} 
+ bytes signing\+\_\+app\+\_\+main.\+adjust\+\_\+metadata (\begin{DoxyParamCaption}\item[{str}]{pdf\+\_\+path}{, }\item[{Optional\mbox{[}List\mbox{[}str\mbox{]}\mbox{]} }]{remove\+\_\+fields\+\_\+metadata}{ = {\ttfamily None}, }\item[{Optional\mbox{[}Dict\mbox{[}str, Any\mbox{]}\mbox{]} }]{add\+\_\+fields\+\_\+metadata}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}   @brief Adjusts metadata of a PDF file.
+
+   This function modifies the metadata of a PDF file by removing/adding specific fields
+   as specified by the parameters. It allows for updating the PDF's metadata without altering
+   the content of the document itself.
+
+   @param pdf_path The path to the PDF file whose metadata is to be adjusted.
+   @param remove_fields_metadata A list of metadata field names to remove from the PDF.
+                                 (Optional, default is None).
+   @param add_fields_metadata A dictionary of metadata field names and values to add to the PDF.
+                              (Optional, default is None).
+
+   @return The PDF file as a byte stream with the updated metadata.
+\end{DoxyVerb}
+ \Hypertarget{namespacesigning__app__main_a1989638fd43eabd42455d480f43c3209}\index{signing\_app\_main@{signing\_app\_main}!check\_signature@{check\_signature}}
+\index{check\_signature@{check\_signature}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{check\_signature()}{check\_signature()}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a1989638fd43eabd42455d480f43c3209} 
+signing\+\_\+app\+\_\+main.\+check\+\_\+signature (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}   @brief Checks the digital signature of the currently selected PDF.
+
+   @return None. Displays the result of the signature check.
+\end{DoxyVerb}
+ \Hypertarget{namespacesigning__app__main_ae8b455614d23fbf7be90b7fde32b7c6b}\index{signing\_app\_main@{signing\_app\_main}!decrypt\_private\_key@{decrypt\_private\_key}}
+\index{decrypt\_private\_key@{decrypt\_private\_key}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{decrypt\_private\_key()}{decrypt\_private\_key()}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_ae8b455614d23fbf7be90b7fde32b7c6b} 
+signing\+\_\+app\+\_\+main.\+decrypt\+\_\+private\+\_\+key (\begin{DoxyParamCaption}\item[{}]{pk\+\_\+path}{, }\item[{}]{passphrase}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}   @brief Decrypts a private key stored in a file.
+
+   This function loads an encrypted private key from the specified file and decrypts it using
+   the provided passphrase. The decrypted private key is returned for use in cryptographic
+   operations such as signing documents.
+
+   @param pk_path The path to the file containing the encrypted private key.
+   @param passphrase The passphrase used to decrypt the private key.
+
+   @return The decrypted private key as a string.
+\end{DoxyVerb}
+ \Hypertarget{namespacesigning__app__main_a5db578db1775710c0e8a30dda2fab022}\index{signing\_app\_main@{signing\_app\_main}!detect\_pendrive@{detect\_pendrive}}
+\index{detect\_pendrive@{detect\_pendrive}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{detect\_pendrive()}{detect\_pendrive()}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a5db578db1775710c0e8a30dda2fab022} 
+signing\+\_\+app\+\_\+main.\+detect\+\_\+pendrive (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}   @brief Detects if a USB pendrive is connected to the system.
+
+   @return The path to the detected pendrive or None if not found.
+\end{DoxyVerb}
+ \Hypertarget{namespacesigning__app__main_a9a32d8f329e28ba461e38e8d80ac2ceb}\index{signing\_app\_main@{signing\_app\_main}!select\_pdf\_to\_sign@{select\_pdf\_to\_sign}}
+\index{select\_pdf\_to\_sign@{select\_pdf\_to\_sign}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{select\_pdf\_to\_sign()}{select\_pdf\_to\_sign()}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a9a32d8f329e28ba461e38e8d80ac2ceb} 
+signing\+\_\+app\+\_\+main.\+select\+\_\+pdf\+\_\+to\+\_\+sign (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    @brief Opens a file dialog to select a PDF file to sign.
+
+    @return None. Stores the selected PDF path for signing.
+\end{DoxyVerb}
+ \Hypertarget{namespacesigning__app__main_a0db7932410f22732f0e839adc111d169}\index{signing\_app\_main@{signing\_app\_main}!select\_private\_key@{select\_private\_key}}
+\index{select\_private\_key@{select\_private\_key}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{select\_private\_key()}{select\_private\_key()}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a0db7932410f22732f0e839adc111d169} 
+signing\+\_\+app\+\_\+main.\+select\+\_\+private\+\_\+key (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    @brief Opens a file dialog to select a private key file.
+
+    @return None. Stores the selected private key for signing purposes.
+\end{DoxyVerb}
+ \Hypertarget{namespacesigning__app__main_a296e1aaaf751d2c62acfc825321d8625}\index{signing\_app\_main@{signing\_app\_main}!sign\_pdf@{sign\_pdf}}
+\index{sign\_pdf@{sign\_pdf}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{sign\_pdf()}{sign\_pdf()}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a296e1aaaf751d2c62acfc825321d8625} 
+signing\+\_\+app\+\_\+main.\+sign\+\_\+pdf (\begin{DoxyParamCaption}\item[{}]{private\+\_\+key\+\_\+pem}{, }\item[{}]{pdf\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    @brief Signs a PDF file using a private key.
+
+    This function signs a PDF file with the provided private key, generating a cryptographic
+    signature that ensures the authenticity of the document. The private key is used to sign
+    the PDF, ensuring that the content has not been changed since the signature was applied.
+
+    @param private_key_pem The private key in PEM format used for signing the PDF.
+    @param pdf_path The path to the PDF file that needs to be signed.
+
+    @return The signed PDF as a byte stream.
+\end{DoxyVerb}
+ \Hypertarget{namespacesigning__app__main_a2419bdf6798de9ff6480e1114b4c5c25}\index{signing\_app\_main@{signing\_app\_main}!verify\_signature@{verify\_signature}}
+\index{verify\_signature@{verify\_signature}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{verify\_signature()}{verify\_signature()}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a2419bdf6798de9ff6480e1114b4c5c25} 
+signing\+\_\+app\+\_\+main.\+verify\+\_\+signature (\begin{DoxyParamCaption}\item[{}]{signed\+\_\+pdf\+\_\+path}{, }\item[{}]{public\+\_\+key\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    @brief Verifies the digital signature of a PDF document.
+
+    @param signed_pdf_path Path to the signed PDF file.
+    @param public_key_path Path to the public key used for verification.
+
+    @return None. Displays result of verification.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacesigning__app__main_af44705a524144d78cc642cf489b30e80}\index{signing\_app\_main@{signing\_app\_main}!aes\_mode@{aes\_mode}}
+\index{aes\_mode@{aes\_mode}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{aes\_mode}{aes\_mode}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_af44705a524144d78cc642cf489b30e80} 
+signing\+\_\+app\+\_\+main.\+aes\+\_\+mode = AES.\+MODE\+\_\+\+GCM}
+
+\Hypertarget{namespacesigning__app__main_a28863b21b915e7cd233bad744fae1a09}\index{signing\_app\_main@{signing\_app\_main}!anchor@{anchor}}
+\index{anchor@{anchor}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{anchor}{anchor}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a28863b21b915e7cd233bad744fae1a09} 
+signing\+\_\+app\+\_\+main.\+anchor}
+
+\Hypertarget{namespacesigning__app__main_a1c00a65ba58f86901bbb20b056664bf0}\index{signing\_app\_main@{signing\_app\_main}!background@{background}}
+\index{background@{background}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{background}{background}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a1c00a65ba58f86901bbb20b056664bf0} 
+signing\+\_\+app\+\_\+main.\+background}
+
+\Hypertarget{namespacesigning__app__main_afbd0d038ec8de68df79f90d958d5fae4}\index{signing\_app\_main@{signing\_app\_main}!bg@{bg}}
+\index{bg@{bg}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{bg}{bg}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_afbd0d038ec8de68df79f90d958d5fae4} 
+signing\+\_\+app\+\_\+main.\+bg}
+
+\Hypertarget{namespacesigning__app__main_ad35e6a4e3b9e0126a8936e4c1c6376a5}\index{signing\_app\_main@{signing\_app\_main}!check\_signature\_button@{check\_signature\_button}}
+\index{check\_signature\_button@{check\_signature\_button}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{check\_signature\_button}{check\_signature\_button}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_ad35e6a4e3b9e0126a8936e4c1c6376a5} 
+signing\+\_\+app\+\_\+main.\+check\+\_\+signature\+\_\+button = ttk.\+Button(\mbox{\hyperlink{namespacesigning__app__main_a5879231da862a529c051c81f3007c344}{frame}}, text="{}Check Signature"{}, command=\mbox{\hyperlink{namespacesigning__app__main_a1989638fd43eabd42455d480f43c3209}{check\+\_\+signature}}, \mbox{\hyperlink{namespacesigning__app__main_ac0a5b25287e2a78fa2b60ae616b257ef}{style}}="{}Custom.\+TButton"{})}
+
+\Hypertarget{namespacesigning__app__main_a88b85eedcb640eb7d0ee7ead87562af7}\index{signing\_app\_main@{signing\_app\_main}!column@{column}}
+\index{column@{column}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{column}{column}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a88b85eedcb640eb7d0ee7ead87562af7} 
+signing\+\_\+app\+\_\+main.\+column}
+
+\Hypertarget{namespacesigning__app__main_a042c9b6c9c32991f2f66586bc46aa266}\index{signing\_app\_main@{signing\_app\_main}!font@{font}}
+\index{font@{font}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a042c9b6c9c32991f2f66586bc46aa266} 
+signing\+\_\+app\+\_\+main.\+font}
+
+\Hypertarget{namespacesigning__app__main_a5879231da862a529c051c81f3007c344}\index{signing\_app\_main@{signing\_app\_main}!frame@{frame}}
+\index{frame@{frame}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a5879231da862a529c051c81f3007c344} 
+signing\+\_\+app\+\_\+main.\+frame = ttk.\+Frame(\mbox{\hyperlink{namespacesigning__app__main_a1ef6ec2a18f86a7ae10c352b7aaf044c}{main\+\_\+window}}, \mbox{\hyperlink{namespacesigning__app__main_a3f4835b45af96ea7dacfd53e7e1b12e4}{padding}}=20)}
+
+\Hypertarget{namespacesigning__app__main_a1ef6ec2a18f86a7ae10c352b7aaf044c}\index{signing\_app\_main@{signing\_app\_main}!main\_window@{main\_window}}
+\index{main\_window@{main\_window}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{main\_window}{main\_window}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a1ef6ec2a18f86a7ae10c352b7aaf044c} 
+signing\+\_\+app\+\_\+main.\+main\+\_\+window = tk.\+Tk()}
+
+\Hypertarget{namespacesigning__app__main_abce5794c17512cfefdaf5fb7d6306f3f}\index{signing\_app\_main@{signing\_app\_main}!MANUAL\_KEY\_SELECTION@{MANUAL\_KEY\_SELECTION}}
+\index{MANUAL\_KEY\_SELECTION@{MANUAL\_KEY\_SELECTION}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{MANUAL\_KEY\_SELECTION}{MANUAL\_KEY\_SELECTION}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_abce5794c17512cfefdaf5fb7d6306f3f} 
+bool signing\+\_\+app\+\_\+main.\+MANUAL\+\_\+\+KEY\+\_\+\+SELECTION = False}
+
+\Hypertarget{namespacesigning__app__main_a3f4835b45af96ea7dacfd53e7e1b12e4}\index{signing\_app\_main@{signing\_app\_main}!padding@{padding}}
+\index{padding@{padding}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{padding}{padding}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a3f4835b45af96ea7dacfd53e7e1b12e4} 
+signing\+\_\+app\+\_\+main.\+padding}
+
+\Hypertarget{namespacesigning__app__main_a6bf98172ff795f4a2a3a9affe8321e81}\index{signing\_app\_main@{signing\_app\_main}!padx@{padx}}
+\index{padx@{padx}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{padx}{padx}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a6bf98172ff795f4a2a3a9affe8321e81} 
+signing\+\_\+app\+\_\+main.\+padx}
+
+\Hypertarget{namespacesigning__app__main_abd2b2e27e9f6fb3167709562cf7135a2}\index{signing\_app\_main@{signing\_app\_main}!pady@{pady}}
+\index{pady@{pady}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{pady}{pady}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_abd2b2e27e9f6fb3167709562cf7135a2} 
+signing\+\_\+app\+\_\+main.\+pady}
+
+\Hypertarget{namespacesigning__app__main_a9f99ba1c86c156364df14615d3db849f}\index{signing\_app\_main@{signing\_app\_main}!PRIVATE\_KEY@{PRIVATE\_KEY}}
+\index{PRIVATE\_KEY@{PRIVATE\_KEY}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{PRIVATE\_KEY}{PRIVATE\_KEY}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a9f99ba1c86c156364df14615d3db849f} 
+signing\+\_\+app\+\_\+main.\+PRIVATE\+\_\+\+KEY = None}
+
+\Hypertarget{namespacesigning__app__main_a65f0121cf3def5d3461cf954a3f36be3}\index{signing\_app\_main@{signing\_app\_main}!relx@{relx}}
+\index{relx@{relx}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{relx}{relx}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a65f0121cf3def5d3461cf954a3f36be3} 
+signing\+\_\+app\+\_\+main.\+relx}
+
+\Hypertarget{namespacesigning__app__main_a3976f312ea8aa1bd72210e0687a88237}\index{signing\_app\_main@{signing\_app\_main}!rely@{rely}}
+\index{rely@{rely}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{rely}{rely}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a3976f312ea8aa1bd72210e0687a88237} 
+signing\+\_\+app\+\_\+main.\+rely}
+
+\Hypertarget{namespacesigning__app__main_a0e38281daad79309eacbdc8da1203a36}\index{signing\_app\_main@{signing\_app\_main}!row@{row}}
+\index{row@{row}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a0e38281daad79309eacbdc8da1203a36} 
+signing\+\_\+app\+\_\+main.\+row}
+
+\Hypertarget{namespacesigning__app__main_afd5ccf66412fdbd9de5882652c70c35c}\index{signing\_app\_main@{signing\_app\_main}!select\_key\_button@{select\_key\_button}}
+\index{select\_key\_button@{select\_key\_button}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{select\_key\_button}{select\_key\_button}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_afd5ccf66412fdbd9de5882652c70c35c} 
+signing\+\_\+app\+\_\+main.\+select\+\_\+key\+\_\+button = ttk.\+Button(\mbox{\hyperlink{namespacesigning__app__main_a5879231da862a529c051c81f3007c344}{frame}}, text="{}Select Private Key"{}, command=\mbox{\hyperlink{namespacesigning__app__main_a0db7932410f22732f0e839adc111d169}{select\+\_\+private\+\_\+key}}, \mbox{\hyperlink{namespacesigning__app__main_ac0a5b25287e2a78fa2b60ae616b257ef}{style}}="{}Custom.\+TButton"{})}
+
+\Hypertarget{namespacesigning__app__main_a25cbf5fc718f1a2a6e539625c6d7b7d9}\index{signing\_app\_main@{signing\_app\_main}!sign\_pdf\_button@{sign\_pdf\_button}}
+\index{sign\_pdf\_button@{sign\_pdf\_button}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{sign\_pdf\_button}{sign\_pdf\_button}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a25cbf5fc718f1a2a6e539625c6d7b7d9} 
+signing\+\_\+app\+\_\+main.\+sign\+\_\+pdf\+\_\+button = ttk.\+Button(\mbox{\hyperlink{namespacesigning__app__main_a5879231da862a529c051c81f3007c344}{frame}}, text="{}Sign PDF"{}, state=tk.\+DISABLED, command=\mbox{\hyperlink{namespacesigning__app__main_a9a32d8f329e28ba461e38e8d80ac2ceb}{select\+\_\+pdf\+\_\+to\+\_\+sign}}, \mbox{\hyperlink{namespacesigning__app__main_ac0a5b25287e2a78fa2b60ae616b257ef}{style}}="{}Custom.\+TButton"{})}
+
+\Hypertarget{namespacesigning__app__main_a1899ff635f452dadd52f4f803ae2433a}\index{signing\_app\_main@{signing\_app\_main}!sticky@{sticky}}
+\index{sticky@{sticky}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{sticky}{sticky}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a1899ff635f452dadd52f4f803ae2433a} 
+signing\+\_\+app\+\_\+main.\+sticky}
+
+\Hypertarget{namespacesigning__app__main_ac0a5b25287e2a78fa2b60ae616b257ef}\index{signing\_app\_main@{signing\_app\_main}!style@{style}}
+\index{style@{style}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{style}{style}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_ac0a5b25287e2a78fa2b60ae616b257ef} 
+signing\+\_\+app\+\_\+main.\+style = ttk.\+Style()}
+
+\Hypertarget{namespacesigning__app__main_a9bf1b0cead0e023749fe749edacd687b}\index{signing\_app\_main@{signing\_app\_main}!usb\_status\_label@{usb\_status\_label}}
+\index{usb\_status\_label@{usb\_status\_label}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{usb\_status\_label}{usb\_status\_label}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_a9bf1b0cead0e023749fe749edacd687b} 
+signing\+\_\+app\+\_\+main.\+usb\+\_\+status\+\_\+label = ttk.\+Label(\mbox{\hyperlink{namespacesigning__app__main_a5879231da862a529c051c81f3007c344}{frame}}, text="{}There are no keys on USB detected"{}, \mbox{\hyperlink{namespacesigning__app__main_a042c9b6c9c32991f2f66586bc46aa266}{font}}=("{}Arial"{}, 10))}
+
+\Hypertarget{namespacesigning__app__main_abec01c90a1c1956ac9b82970ecb446da}\index{signing\_app\_main@{signing\_app\_main}!usb\_thread@{usb\_thread}}
+\index{usb\_thread@{usb\_thread}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{usb\_thread}{usb\_thread}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_abec01c90a1c1956ac9b82970ecb446da} 
+signing\+\_\+app\+\_\+main.\+usb\+\_\+thread = threading.\+Thread(target=\mbox{\hyperlink{namespacesigning__app__main_a5db578db1775710c0e8a30dda2fab022}{detect\+\_\+pendrive}}, daemon=True)}
+
+\Hypertarget{namespacesigning__app__main_acbd8018c2c8f6b3dfbf935d47331d961}\index{signing\_app\_main@{signing\_app\_main}!weight@{weight}}
+\index{weight@{weight}!signing\_app\_main@{signing\_app\_main}}
+\doxysubsubsection{\texorpdfstring{weight}{weight}}
+{\footnotesize\ttfamily \label{namespacesigning__app__main_acbd8018c2c8f6b3dfbf935d47331d961} 
+signing\+\_\+app\+\_\+main.\+weight}
+
